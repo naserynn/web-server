@@ -15,9 +15,10 @@ const forecast = (latitude, longitude, callback) => {
           callback("Unable to fetch location", undefined);
         } else {
           const {
-            current: { temperature, feelslike },
+            current: { temperature, feelslike, cloudcover },
           } = data;
-          callback(undefined, { temperature, feelslike });
+
+          callback(undefined, { temperature, feelslike, cloudcover });
         }
       } else if (error) {
         callback("Unable to connect to weatherstack API", undefined);

@@ -14,8 +14,8 @@ weatherForm.addEventListener("submit", (event) => {
         if (data?.error) {
           result.innerHTML = data.error;
         } else {
-          const { location, temperature, feelslike } = data;
-          result.innerHTML = `The current temperature in ${location} is ${temperature} degrees. It feels like ${feelslike} degrees.`;
+          const { location, temperature, feelslike, cloudcover } = data;
+          result.innerHTML = `The current temperature in ${location} is ${temperature} degrees. It feels like ${feelslike} degrees. There is ${cloudcover}% cloud cover.`;
         }
       })
     )

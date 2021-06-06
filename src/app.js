@@ -57,8 +57,8 @@ app.get("/weather", (req, res) => {
         if (error) {
           return res.send({ error });
         } else if (data) {
-          const { temperature, feelslike } = data;
-          return res.send({ location, temperature, feelslike });
+          const { temperature, feelslike, cloudcover } = data;
+          return res.send({ location, temperature, feelslike, cloudcover });
         }
       });
     }
